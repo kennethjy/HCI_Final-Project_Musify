@@ -1,0 +1,117 @@
+/* general styles */
+body {
+  font-family: Arial, sans-serif;
+  background-color: rgb(229, 204, 255);
+  margin: 0;
+  padding: 0;
+}
+
+/* header styles */
+header {
+  text-align: center;
+  padding: 20px;
+  color: rgb(99, 14, 237);
+}
+
+.artist-name {
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+
+.artist-img {
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+}
+
+/* section styles */
+section {
+  padding: 20px;
+}
+
+.section-heading {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+.bio {
+  font-size: 1.2em;
+  line-height: 1.5;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+/* list styles */
+
+
+.song-list, .album-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+
+.song, .album {
+  flex: 0 0 15%; 
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 5px;
+  margin-top: 5px;
+  width: 180px;
+  height: 250px;
+  position: relative; 
+  padding: 10px; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgb(207, 146, 222);
+  box-sizing: border-box;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.song img, .album img {
+  max-width: 160px;
+  border-radius: 10px;
+}
+
+.image2 {
+  opacity: 0;
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50px;
+  height: 50px;
+}
+
+/* footer styles */
+footer {
+  text-align: center;
+  background-color: #303030;
+  color: #fff;
+  padding: 10px;
+}
+
+footer ul {
+  list-style: none;
+}
+
+.link-list {
+  display: flex;
+  justify-content: center;
+}
+
+.link {
+  font-size: 1.2em;
+  margin: 10px;
+  text-decoration: none;
+  color: #fff;
+}
+
+.link a:hover {
+  color: #f0f0f0;
+}
+.link a {
+  text-decoration: none;
+}
