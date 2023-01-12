@@ -49,8 +49,8 @@ body {
     width: 100px;
     height: 35px;
     margin-left: 10px;
-    background-color: rgb(255, 255, 255);
-    color: rgb(204, 153, 255);
+    background-color: rgb(65, 71, 235);
+    color: rgb(244, 234, 253);
     border: none;
     border-radius: 5px;
     font-size: 14px;
@@ -95,6 +95,7 @@ body {
 
   main ul li a {
     text-decoration: none;
+    color: black;
   }
   
   main li {
@@ -106,8 +107,8 @@ body {
   }
   
   main img {
-    width: 150px;
-    height: 150px;
+    width: 200px;
+    height: 200px;
     margin: 0 auto 10px auto;
   }
   

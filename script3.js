@@ -1,40 +1,37 @@
-// toggle play/pause button for banner video
-var bannerVideo = document.querySelector('.banner video');
-var playPauseButton = document.querySelector('.play-pause-button');
-
-playPauseButton.addEventListener('click', function() {
-  if (bannerVideo.paused) {
-    bannerVideo.play();
-    playPauseButton.textContent = 'Pause';
+$(".play").click(function() {
+  var audio = $(".song-file")[0];;
+  if (audio.paused) {
+      $(this).text("Pause");
+      audio.play();
   } else {
-    bannerVideo.pause();
-    playPauseButton.textContent = 'Play';
+      $(this).text("Play");
+      audio.pause();
   }
 });
 
-// add active class to currently playing song
-var songList = document.querySelector('.artist-releases ul');
+function goto(href){
+  window.location.href = href;
+}
 
-songList.addEventListener('click', function(event) {
-  var currentSong = document.querySelector('.current-song');
-  if (currentSong) {
-    currentSong.classList.remove('current-song');
-  }
-  event.target.classList.add('current-song');
+
+
+$('.album').hover(function() {
+  // code to be executed when mouse enters the album div
+  $(this).find('.image2').stop()
+  $(this).animate(250, function(){
+    $(this).css("background-color", "rgb(220, 140, 212)");
+  });
+  $(this).find('.image2').animate({opacity: 0.75}, 250);
+}, function() {
+  // code to be executed when mouse leaves the album div
+  $(this).find('.image2').stop()
+  $(this).animate(250, function(){
+    $(this).css("background-color", "rgb(207, 146, 222)");
+  });
+  $(this).find('.image2').animate({opacity: 0}, 250);
 });
 
-// show tour dates for selected city
-var tourCitySelect = document.querySelector('.tour-city-select');
-var tourDatesList = document.querySelector('.tour-dates ul');
-
-tourCitySelect.addEventListener('change', function() {
-  var selectedCity = tourCitySelect.value;
-  for (var i = 0; i < tourDatesList.children.length; i++) {
-    var tourDate = tourDatesList.children[i];
-    if (tourDate.dataset.city === selectedCity) {
-      tourDate.style.display = 'block';
-    } else {
-      tourDate.style.display = 'none';
-    }
-  }
+$(".album").click(function(){
+  window.location.href = $(this).attr("redirect");
 });
+

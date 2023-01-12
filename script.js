@@ -1,45 +1,39 @@
-document.addEventListener("DOMContentLoaded", function() {
-    // Search form submission
-    const searchForm = document.querySelector("header form");
-    searchForm.addEventListener("submit", function(event) {
-      window.location.href = "#"
-      event.preventDefault();
-      const searchTerm = this.querySelector("input[type='text']").value;
-      searchSongs(searchTerm);
-    });
-  
-    // Navigation menu item clicks
-    const navLinks = document.querySelectorAll("header nav ul li a");
-    navLinks.forEach(function(link) {
-      link.addEventListener("click", function(event) {
-        event.preventDefault();
-        const genre = this.textContent;
-        getSongsByGenre(genre);
-      });
-    });
-  
-    // Featured song clicks
-    const songCards = document.querySelectorAll("main ul li");
-    songCards.forEach(function(card) {
-      card.addEventListener("click", function() {
-        const songId = this.dataset.songId;
-        playSong(songId);
-      });
-    });
-  });
-  
-  function searchSongs(term) {
-    // Make an AJAX call to the server to search for songs
-    console.log(`Searching for songs with term: ${term}`);
+const start1 = document.getElementById("song-start1");
+const audio1 = document.getElementById("audio1");
+    
+start1.addEventListener("click", function() {
+  if(audio1.paused){
+    audio1.play();
+    start1.innerHTML = "Pause";
+  } else {
+    audio1.pause();
+    start1.innerHTML = "Play";
   }
-  
-  function getSongsByGenre(genre) {
-    // Make an AJAX call to the server to get songs by genre
-    console.log(`Getting songs in genre: ${genre}`);
+});
+
+const start2 = document.getElementById("song-start2");
+const audio2 = document.getElementById("audio2");
+    
+start2.addEventListener("click", function() {
+  if(audio2.paused){
+    audio2.play();
+    start2.innerHTML = "Pause";
+  } else {
+    audio2.pause();
+    start2.innerHTML = "Play";
   }
-  
-  function playSong(id) {
-    // Make an AJAX call to the server to play a song
-    console.log(`Playing song with id: ${id}`);
+});
+
+const start3 = document.getElementById("song-start3");
+const audio3 = document.getElementById("audio3");
+    
+start3.addEventListener("click", function() {
+  if(audio3.paused){
+    audio3.play();
+    start3.innerHTML = "Pause";
+  } else {
+    audio3.pause();
+    start3.innerHTML = "Play";
   }
+});
   

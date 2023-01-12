@@ -33,3 +33,13 @@ $('.album, .song').hover(function() {
 $(".album").click(function(){
     window.location.href = $(this).attr("redirect");
 });
+
+$(".song").click(function() {
+  var audio = $(this).find(".song-file")[0];
+  if (audio.paused) {
+      audio.play();
+  } else {
+      audio.pause();
+  }
+});
+
