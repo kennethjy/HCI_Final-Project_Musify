@@ -1,3 +1,4 @@
+/* general styles */
 body {
   font-family: Arial, sans-serif;
   background-color: rgb(229, 204, 255);
@@ -5,6 +6,7 @@ body {
   padding: 0;
 }
 
+/* header styles */
 header {
   text-align: center;
   padding: 20px;
@@ -22,6 +24,7 @@ header {
   height: 200px;
 }
 
+/* section styles */
 section {
   padding: 20px;
 }
@@ -37,6 +40,7 @@ section {
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
+/* list styles */
 ul {
   list-style-type: none;
   margin: 0;
@@ -78,13 +82,19 @@ ul {
 .image2 {
   opacity: 0;
   position: absolute;
-  top: 40%;
+  top: 35%;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 50px;
   height: 50px;
 }
 
+#instructions{
+  color: #4d2cc4;
+  margin-bottom: -10px
+}
+
+/* footer styles */
 footer {
   text-align: center;
   background-color: #303030;

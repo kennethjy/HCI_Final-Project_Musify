@@ -121,12 +121,16 @@ body {
   main h5 {
     margin: 0;
     font-size: 14px;
-    color: rgb(224, 79, 84);
+    color: rgb(59, 42, 186);
     margin-bottom: 10px;
   }
   
+  main #instructions{
+    margin-bottom: 20px;
+  }
+
 footer {
-    display: flex;
+  display: flex;
   justify-content: center;
   align-items: center;
   position: fixed;
